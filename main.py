@@ -13,8 +13,9 @@ while True:
 
 		for contra in setting.param_list:
 			#  You will get a warning if you don't specify a dtype. There may be a better way.
-			txData = pd.read_csv(setting.param[contra]['csv'], encoding='utf8', dtype={'input': str, 'contractAddress': str,\
-								 'cumulativeGasUsed': str, 'gasUsed': str, 'confirmations': str, 'methodId': str, 'functionName': str})
+			txData = pd.read_csv(setting.param[contra]['csv'], encoding='utf8', dtype={'input': str,  \
+								 'contractAddress': str, 'cumulativeGasUsed': str, 'gasUsed': str,  \
+								'confirmations': str, 'methodId': str, 'functionName': str})
 			#  set param
 			fileName = setting.param[contra]['csv'] 
 			etherScanAddress = setting.param[contra]['address'] 
